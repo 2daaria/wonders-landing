@@ -1,0 +1,31 @@
+.stats {
+	background-color: var(--primary-blue);
+}
+
+.stats__wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-inline: var(--wrapper-offset);
+	padding-block: clamp(1.25rem, 0.4375rem + 3.6111vw, 3.6875rem);
+	gap: 30px;
+}
+
+.stats__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.stats__item-value {
+	color: var(--white);
+	font-family: 'Poppins-Bold', sans-serif;
+	font-size: clamp(1rem, 0.2917rem + 3.1481vw, 3.125rem);
+}
+
+.stats__item-title {
+	color: var(--white);
+	font-family: "Poppins-Medium", sans-serif;
+	font-size: clamp(0.875rem, 0.75rem + 0.5556vw, 1.25rem);
+	text-wrap: nowrap;
+}
