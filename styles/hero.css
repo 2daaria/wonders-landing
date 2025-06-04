@@ -1,0 +1,229 @@
+.hero {
+	background: linear-gradient(to top, #e0eefd, #f3f4f6);
+}
+
+.hero__wrapper {
+	display: flex;
+	justify-content: center;
+	padding-inline: var(--wrapper-offset);
+	padding-top: 64px;
+	padding-bottom: 128px;
+	gap: 32px;
+}
+
+.hero__content, .hero__image {
+	flex-basis: 640px;
+}
+
+.hero__title {
+	font-family: 'Poppins-Bold', sans-serif;
+	font-size: clamp(2rem, 1.3333rem + 2.963vw, 4rem);
+	margin-bottom: 32px;
+}
+
+.hero__text {
+	margin-bottom: 32px;
+}
+
+/*СТИЛИЗАЦИЯ ФОРМЫ*/
+
+.form__trip-and-passengers, .form__stations, .form__dates, .form__search-btn-wrapper {
+	width: 100%;
+	min-width: 440px;
+}
+
+/*----ПЕРВЫЙ РЯД-----*/
+/*контейнер первой строки формы*/
+.form__trip-and-passengers {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
+	background-color: var(--white);
+	border-radius: var(--border-radius);
+	padding-inline: 24px;
+	padding-block: 1px;
+}
+
+/*РАДИО КНОПКИ*/
+.form__radio {
+	position: absolute;
+	opacity: 0;
+}
+
+.form__radio-control {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.form__radio-label {
+	position: relative;
+	padding-left: calc(18px + 7px); /* место под кастомную иконку радио + паддинг от иконки до лейбла*/
+	font-size: 14px;
+	text-wrap: nowrap;
+}
+
+/*кастомный радио*/
+.form__radio-label::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 18px;
+	height: 24px;
+	background-image: url("/assets/icons/radio-unchecked.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* при выборе */
+.form__radio:checked + .form__radio-label::before {
+	background-image: url("/assets/icons/radio-checked.svg");
+}
+
+/*.form__radio:focus + .form__radio-label::before {
+	outline: none;
+	border: var(--focus-border);
+	border-radius: var(--border-radius);
+	padding: 2px;
+}*/
+
+/*СЧЕТТЧИК ПАССАЖИРОВ*/
+
+/*контейнер счетчика пассажиров*/
+.form__passengers {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+/*контейнер для кнопок и инпута*/
+.form__passengers-counter {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+/*кнопки плюс и минус*/
+.form__btn-passenger-count {
+	background: none;
+	outline: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.form__btn-passenger-count:focus {
+	border: var(--focus-border);
+	border-radius: var(--border-radius);
+	padding: 2px;
+}
+
+/*инпут с количеством пассажиров*/
+/*из-за стрелочек-контролеров значение инпута не по середине*/
+.form__passengers-input {
+	width: 31px;
+	font-family: "Poppins-Medium", sans-serif;
+	font-size: 14px;
+	border: none;
+	outline: none;
+	background: transparent;
+	/*text-align: center;*/ /*не работает*/
+}
+
+/*----ВТОРОЙ РЯД-----*/
+
+.form__stations {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-block: 24px;
+	column-gap: 32px;
+}
+
+.form__field-stations {
+	width: 100%;
+}
+
+.form__label, .form__legend {
+	display: block;
+	font-family: 'Poppins-SemiBold', sans-serif;
+	padding-bottom: 16px;
+	line-height: 1.2;
+}
+
+.form__input {
+	width: 100%;
+	height: 53px;
+	background-color: var(--white);
+	border: none;
+	border-radius: var(--border-radius);
+	padding-left: 24px;
+	transition: var(--transition);
+}
+
+.form__input::placeholder, .form__date-btn {
+	font-family: "Poppins-Medium", sans-serif;
+	font-size: 14px;
+	color: var(--primary-grey);
+}
+
+.form__input:focus {
+	border: var(--focus-border);
+	outline: none;
+}
+
+/*----ТРЕТИЙ РЯД-----*/
+
+.form__buttons-wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 24px;
+	gap: 32px;
+}
+
+.form__btn-container {
+	width: 50%;
+}
+
+.form__date-btn {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	height: 53px;
+	width: 100%;
+	background-color: var(--white);
+	border: none;
+	border-radius: var(--border-radius);
+	padding-left: 24px;
+	transition: var(--transition);
+}
+
+.form__date-btn:focus {
+	border: var(--focus-border);
+	border-radius: var(--border-radius);
+	outline: none;
+}
+
+/*----КНОПКА ФОРМЫ----*/
+.form__search-btn {
+	width: 100%;
+	height: 62px;
+	border: none;
+	border-radius: var(--border-radius);
+	background-color: var(--primary-blue);
+	font-family: "Poppins-Bold", sans-serif;
+	color: var(--white);
+	font-size: 20px;
+	transition: var(--transition);
+}
+
+.form__search-btn:focus, .form__search-btn:hover {
+	background-color: var(--primary-black);
+}
+
+
+
