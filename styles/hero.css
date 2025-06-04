@@ -22,6 +22,9 @@
 }
 
 .hero__text {
+	display: flex;
+	flex-direction: column;
+	font-size: clamp(0.75rem, 0.6667rem + 0.3704vw, 1rem);
 	margin-bottom: 32px;
 }
 
@@ -29,7 +32,7 @@
 
 .form__trip-and-passengers, .form__stations, .form__dates, .form__search-btn-wrapper {
 	width: 100%;
-	min-width: 440px;
+	min-width: 380px;
 }
 
 /*----ПЕРВЫЙ РЯД-----*/
@@ -73,14 +76,14 @@
 	transform: translateY(-50%);
 	width: 18px;
 	height: 24px;
-	background-image: url("/assets/icons/radio-unchecked.svg");
+	background-image: url("/assets/icons/unchecked.svg");
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 /* при выборе */
 .form__radio:checked + .form__radio-label::before {
-	background-image: url("/assets/icons/radio-checked.svg");
+	background-image: url("/assets/icons/checked.svg");
 }
 
 /*СЧЕТТЧИК ПАССАЖИРОВ*/
