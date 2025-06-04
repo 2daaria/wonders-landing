@@ -17,6 +17,13 @@
 	font-size: 34px;
 }
 
+.site-logo:focus {
+	border: var(--focus-border);
+	border-radius: var(--border-radius);
+	padding: 2px;
+	outline: none;
+}
+
 .burger-button {
 	display: none;
 }
@@ -36,6 +43,14 @@
 
 .main-nav__item-link:hover {
 	color: var(--primary-blue);
+}
+
+.main-nav__item-link:focus {
+	color: var(--primary-blue);
+	border: var(--focus-border);
+	border-radius: var(--border-radius);
+	padding: 2px;
+	outline: none;
 }
 
 .main-nav__item-signup {
