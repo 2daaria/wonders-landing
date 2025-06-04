@@ -75,150 +75,159 @@
 					</div>
 					
 					<!--------------FORM--------------->
-					<form class="form-search" action="#" method="get">
+					<form class="form" action="#" method="get">
 						
 						<!--------------ПЕРВЫЙ РЯД ФОРМЫ--------------->
-						<div class="form-search__trip-and-passengers"> <!--див нужен, чтобы выстроить элементы в ряд-->
+						<div class="form__trip-and-passengers"> <!--див нужен, чтобы выстроить элементы в ряд-->
 							
-							<div class="form-search__trip-type"> <!--первый блок с выбором типа поездки-->
-								<input
-									type="radio"
-									class="form-search__radio"
-									id="round-trip"
-									name="trip"
-									value="round" checked
-								>
-								<label for="round-trip">Round Trip</label>
-							
+							<div class="form__trip-type"> <!--первый блок с выбором типа поездки-->
+								<label for="round" class="form__radio-control">
+									<input
+										type="radio"
+										class="form__radio form__radio-round"
+										id="round"
+										name="trip"
+										value="round"
+										checked
+									>
+									<span class="form__radio-label">Round Trip</span>
+								</label>
 							</div>
 							
-							<div class="form-search__trip-type">
-								<input
-									type="radio"
-									class="form-search__radio"
-									id="oneway-trip"
-									name="trip"
-									value="oneway"
-								>
-								<label for="oneway-trip">One Way</label>
+							<div class="form__trip-type">
+								<label for="oneway" class="form__radio-control">
+									<input
+										type="radio"
+										class="form__radio form__radio-oneway"
+										id="oneway"
+										name="trip"
+										value="oneway"
+									>
+									<span class="form__radio-label">One Way</span>
+								</label>
 							</div>
 							
-							<div class="form-search__passengers"> <!--второй блок со счётчиком-->
+							<div class="form__passengers"> <!--второй блок со счётчиком / контейнер счетчика пассажиров-->
 								<label for="passenger-count" class="visually-hidden">Passengers</label>
 								<img
 									src="./assets/icons/person%20solid.svg"
 									alt="Person icon"
+									class="form__passenger-count-icon"
 									width="22"
 									height="32"
 									aria-hidden="true"
 								>
 								
-								<!--кнопка уменьшения количества пассажиров-->
-								<button
-									type="button"
-									class="form-search__btn-minus"
-									id="btn-minus"
-									aria-label="Remove passenger">
-									<img
-										src="./assets/icons/Minus.svg"
-										alt=""
-										width="20"
-										height="20"
-										aria-hidden="true"
+								<div class="form__passengers-counter">
+									<!--кнопка уменьшения количества пассажиров-->
+									<button
+										type="button"
+										class="form__btn-passenger-count"
+										id="btn-minus"
+										aria-label="Remove passenger">
+										<img
+											src="./assets/icons/Minus.svg"
+											alt=""
+											width="20"
+											height="20"
+											aria-hidden="true"
+										>
+									</button>
+									
+									<!--счётчик пассажиров-->
+									<input
+										type="number"
+										class="form__passengers-input"
+										id="passenger-count"
+										value="1"
+										min="1"
+										max="12"
+										readonly
 									>
-								</button>
-								
-								<!--счётчик пассажиров-->
-								<input
-									type="number"
-									class="form-search__passenger-count"
-									id="passenger-count"
-									value="1"
-									min="1"
-									max="12"
-									readonly
-								>
-								
-								<!--кнопка увеличения количества пассажиров-->
-								<button
-									type="button"
-									class="form-search__btn-plus"
-									id="btn-plus"
-									aria-label="Add passenger">
-									<img
-										src="./assets/icons/Plus.svg"
-										alt=""
-										width="20"
-										height="20"
-										aria-hidden="true"
-									>
-								</button>
+									
+									<!--кнопка увеличения количества пассажиров-->
+									<button
+										type="button"
+										class="form__btn-passenger-count"
+										id="btn-plus"
+										aria-label="Add passenger">
+										<img
+											src="./assets/icons/Plus.svg"
+											alt=""
+											width="20"
+											height="20"
+											aria-hidden="true"
+										>
+									</button>
+								</div>
 							</div>
 						</div>
 						
 						<!--------------ВТОРОЙ РЯД ФОРМЫ--------------->
-						<div class="form-search__stations">
+						<div class="form__stations">
 							
 							<!--------поле Departure-------->
-							<div class="form-search__field">
+							<div class="form__field-stations">
 								<label
 									for="departure-station"
-									class="form-search__label">Departure
+									class="form__label">Departure
 								</label>
-								<div class="form-search__autocomplete-wrapper">
+								<div class="form__autocomplete-wrapper">
 									<input
 										type="text"
 										id="departure-station"
-										class="form-search__input"
+										class="form__input"
 										placeholder="Your City/Station"
 										autocomplete="off"
 									>
-									<ul class="form-search__suggestions" hidden></ul>
+									<ul class="form__suggestions" hidden></ul>
 								</div>
 							</div>
 							
 							<!--------поле Arrival-------->
-							<div class="form-search__field">
+							<div class="form__field-stations">
 								<label
 									for="arrival-station"
-									class="form-search__label">Arrival
+									class="form__label">Arrival
 								</label>
 								
-								<div class="form-search__autocomplete-wrapper">
+								<div class="form__autocomplete-wrapper">
 									<input
 										type="text"
 										id="arrival-station"
-										class="form-search__input"
+										class="form__input"
 										placeholder="Where to?"
 										autocomplete="off"
 									>
-									<ul class="form-search__suggestions" hidden></ul>
+									<ul class="form__suggestions" hidden></ul>
 								</div>
 							</div>
 						</div>
 						
 						<!--------------ТРЕТИЙ РЯД ФОРМЫ--------------->
-						<fieldset class="form-search__dates">
-							<legend class="form-search__legend">Pick your lucky day</legend>
-							
-							<div class="form-search__field">
-								<label
-									for="departure-date"
-									class="form-search__label visually-hidden">Departure date
-								</label> <!--в стилях скрою лейбл через visually-hidden-->
+						<div class="form__dates">
+							<fieldset class="form__dates-fieldset">
+								<legend class="form__legend">Pick your lucky day</legend>
 								
-								<!--
-								aria-haspopup="dialog" сообщает, что по клику появится окно
-								aria-expanded="false" потом можно менять в зависимости от того, открыто окно или нет
-								-->
-								<button
-									type="button"
-									class="form-search__date-button"
-									id="departure-date"
-									aria-haspopup="dialog"
-									aria-expanded="false">
+								<div class="form__buttons-wrapper">
+									<div class="form__btn-container">
+										<label
+											for="departure-date"
+											class="form__label visually-hidden">Departure date
+										</label> <!--в стилях скрою лейбл через visually-hidden-->
+										
+										<!--
+										aria-haspopup="dialog" сообщает, что по клику появится окно
+										aria-expanded="false" потом можно менять в зависимости от того, открыто окно или нет
+										-->
+										<button
+											type="button"
+											class="form__date-btn"
+											id="departure-date"
+											aria-haspopup="dialog"
+											aria-expanded="false">
 								
-									<span class="form-search__date-icon" aria-hidden="true">
+									<span class="form__date-icon" aria-hidden="true">
 											<img
 												src="./assets/icons/Calendar.svg"
 												alt=""
@@ -226,24 +235,24 @@
 												height="24"
 											>
 										</span>
-									<span class="form-search__date-text">Depart</span>
-								</button>
-							</div>
-							
-							<div class="form-search__field">
-								<label
-									for="return-date"
-									class="form-search__label visually-hidden">Return date
-								</label> <!--в стилях скрою лейбл через visually-hidden-->
-								
-								<!--кнопка для вызова календаря-->
-								<button
-									type="button"
-									class="form-search__date-button"
-									id="return-date"
-									aria-haspopup="dialog"
-									aria-expanded="false">
-									<span class="form-search__date-icon" aria-hidden="true">
+											<span class="form__date-text">Depart</span>
+										</button>
+									</div>
+									
+									<div class="form__btn-container">
+										<label
+											for="return-date"
+											class="form__label visually-hidden">Return date
+										</label> <!--в стилях скрою лейбл через visually-hidden-->
+										
+										<!--кнопка для вызова календаря-->
+										<button
+											type="button"
+											class="form__date-btn"
+											id="return-date"
+											aria-haspopup="dialog"
+											aria-expanded="false">
+									<span class="form__date-icon" aria-hidden="true">
 											<img
 												src="./assets/icons/Calendar.svg"
 												alt=""
@@ -251,17 +260,21 @@
 												height="24"
 											>
 										</span>
-									<span class="form-search__date-text">Return</span>
-								</button>
-							</div>
-						</fieldset>
+											<span class="form__date-text">Return</span>
+										</button>
+									</div>
+								</div>
+							</fieldset>
+						</div>
 						
 						<!--------------КНОПКА ФОРМЫ--------------->
-						<button
-							type="button"
-							id="search-btn"
-							class="form-search__search-btn">Find My Alpine Ride
-						</button>
+						<div class="form__search-btn-wrapper">
+							<button
+								type="button"
+								id="search-btn"
+								class="form__search-btn">Find My Alpine Ride
+							</button>
+						</div>
 					</form>
 				
 				</div>
