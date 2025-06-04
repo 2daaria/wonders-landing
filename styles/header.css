@@ -31,13 +31,16 @@
 .main-nav__list {
 	display: flex;
 	justify-content: space-between;
-	gap: 96px;
+	flex-wrap: wrap;
+	column-gap: clamp(1.875rem, 0.5rem + 6.1111vw, 6rem);
+	row-gap: 10px;
 }
 
 .main-nav__item-link {
 	text-decoration: none;
 	color: var(--primary-black);
-	font-size: 20px;
+	font-size: clamp(1rem, 0.9167rem + 0.3704vw, 1.25rem);
+	text-wrap: nowrap;
 	transition: var(--transition);
 }
 
