@@ -1,6 +1,8 @@
 @import "./normalize.css";
 @import "./header.css";
 @import "./hero.css";
+@import "./stats.css";
+@import "./appstores.css";
 
 @font-face {
 	font-family: 'Poppins-Regular';
@@ -40,7 +42,7 @@
 	--transition: 0.2s ease-in-out;
 	
 	--wrapper-width: 1440px;
-	--wrapper-offset: 64px;
+	--wrapper-offset: clamp(1.25rem, 0.3333rem + 4.0741vw, 4rem);
 	
 	--line-height: 140%;
 	
