@@ -1,0 +1,44 @@
+.site-header__wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding-inline: var(--wrapper-offset);
+	padding-block: 32px;
+}
+
+.site-logo {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	text-decoration: none;
+	color: var(--primary-black);
+	font-size: 34px;
+}
+
+.burger-button {
+	display: none;
+}
+
+.main-nav__list {
+	display: flex;
+	justify-content: space-between;
+	gap: 96px;
+}
+
+.main-nav__item-link {
+	text-decoration: none;
+	color: var(--primary-black);
+	font-size: 20px;
+	transition: var(--transition);
+}
+
+.main-nav__item-link:hover {
+	color: var(--primary-blue);
+}
+
+.main-nav__item-signup {
+	font-family: 'Poppins-SemiBold', sans-serif;
+	font-weight: 600;
+}
