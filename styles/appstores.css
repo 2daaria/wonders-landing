@@ -1,0 +1,27 @@
+.appstores {
+	background-color: var(--yellow);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-inline: clamp(1.875rem, -3.5rem + 23.8889vw, 18rem);
+	padding-top: clamp(2.5rem, 0.6667rem + 8.1481vw, 8rem);
+	padding-bottom: clamp(2.5rem, 0.9167rem + 7.037vw, 7.25rem);
+}
+
+.appstores__title {
+	font-family: 'Poppins-Bold', sans-serif;
+	font-size: clamp(1rem, 0.0417rem + 4.2593vw, 3.875rem);
+	padding-bottom: clamp(1.25rem, 0.4167rem + 3.7037vw, 3.75rem);
+}
+
+.appstores__wrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 863px;
+	gap: 20px;
+}
+
+.appstores__buttons {
+	display: flex;
+}
