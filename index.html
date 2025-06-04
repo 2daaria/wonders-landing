@@ -50,10 +50,11 @@
 				<nav class="main-nav" id="main-nav" aria-label="Main menu">
 					<div class="main-nav__wrapper">
 						<ul class="main-nav__list">
-							<li class="main-nav__item"><a href="#mobile-app">Mobile App</a></li>
-							<li class="main-nav__item"><a href="#faqs">FAQs</a></li>
-							<li class="main-nav__item"><a href="#contact">Contact</a></li>
-							<li class="main-nav__item main-nav__item--sign-up"><a href="#sign-up">Sign Up</a></li>
+							<li class="main-nav__item"><a href="#mobile-app" class="main-nav__item-link">Mobile App</a></li>
+							<li class="main-nav__item"><a href="#faqs" class="main-nav__item-link">FAQs</a></li>
+							<li class="main-nav__item"><a href="#contact" class="main-nav__item-link">Contact</a></li>
+							<li class="main-nav__item"><a href="#sign-up"
+								class="main-nav__item-link main-nav__item-signup">Sign Up</a></li>
 						</ul>
 					</div>
 				</nav>
@@ -68,10 +69,10 @@
 			<div class="hero__wrapper">
 				<div class="hero__content">
 					<h1 class="hero__title">Skip the Climbing, Catch the Bus</h1>
-					
-					<p
-						class="hero__text">We sell tickets to the best seats in the house – houses on wheels, that is! Get ready for jaw-dropping views without breaking a sweat.
-					</p>
+					<div class="hero__text">
+						<p class="hero__text-line">We sell tickets to the best seats in the house – houses on wheels, that is!</p>
+						<p class="hero__text-line">Get ready for jaw-dropping views without breaking a sweat.</p>
+					</div>
 					
 					<!--------------FORM--------------->
 					<form class="form-search" action="#" method="get">
@@ -89,6 +90,9 @@
 								>
 								<label for="round-trip">Round Trip</label>
 								
+							</div>
+							
+							<div class="form-search__trip-type">
 								<input
 									type="radio"
 									class="form-search__radio"
@@ -250,7 +254,7 @@
 				
 				<div class="hero__image">
 					<img
-						src="./assets/images/Hero-img.png"
+						src="./assets/images/hero.png"
 						alt="Wonders visual"
 						width="640"
 						height="704">
