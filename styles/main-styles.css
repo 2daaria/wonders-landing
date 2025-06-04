@@ -37,7 +37,7 @@
 	
 	--input-height: 53px;
 	
-	--transition: 0.3s ease-in-out;
+	--transition: 0.2s ease-in-out;
 	
 	--wrapper-width: 1440px;
 	--wrapper-offset: 64px;
@@ -45,6 +45,8 @@
 	--line-height: 140%;
 	
 	--heading-font: 'Poppins-Bold';
+	
+	--focus-border: 2px solid #0578FF;
 }
 
 body {
