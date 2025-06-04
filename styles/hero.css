@@ -83,13 +83,6 @@
 	background-image: url("/assets/icons/radio-checked.svg");
 }
 
-/*.form__radio:focus + .form__radio-label::before {
-	outline: none;
-	border: var(--focus-border);
-	border-radius: var(--border-radius);
-	padding: 2px;
-}*/
-
 /*СЧЕТТЧИК ПАССАЖИРОВ*/
 
 /*контейнер счетчика пассажиров*/
@@ -123,7 +116,7 @@
 }
 
 /*инпут с количеством пассажиров*/
-/*из-за стрелочек-контролеров значение инпута не по середине*/
+/*из-за стрелочек-контролеров значение инпута не по середине, потом разберусь*/
 .form__passengers-input {
 	width: 31px;
 	font-family: "Poppins-Medium", sans-serif;
@@ -131,7 +124,6 @@
 	border: none;
 	outline: none;
 	background: transparent;
-	/*text-align: center;*/ /*не работает*/
 }
 
 /*----ВТОРОЙ РЯД-----*/
