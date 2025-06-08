@@ -36,7 +36,7 @@ summary::-webkit-details-marker {
 }
 
 summary::after {
-	content: url("/assets/icons/details-opener.svg");
+	content: url("../assets/icons/details-opener.svg");
 	float: right;
 	transition: 0.5s ease-in-out;
 	transform: rotate(0deg);
@@ -44,7 +44,7 @@ summary::after {
 }
 
 details[open] summary::after {
-	content: url("/assets/icons/details-opener.svg");
+	content: url("../assets/icons/details-opener.svg");
 	transform: rotate(45deg) scale(1.25);
 	cursor: pointer;
 }
