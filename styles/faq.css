@@ -40,11 +40,13 @@ summary::after {
 	float: right;
 	transition: 0.5s ease-in-out;
 	transform: rotate(0deg);
+	cursor: pointer;
 }
 
 details[open] summary::after {
 	content: url("/assets/icons/details-opener.svg");
 	transform: rotate(45deg) scale(1.25);
+	cursor: pointer;
 }
 
 @media (min-width: 361px) and (max-width: 768px) {
