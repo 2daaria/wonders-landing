@@ -2,6 +2,8 @@
 @import "header.css";
 @import "stats.css";
 @import "./gallery.css";
+@import "./app-stores.css";
+@import "./faq.css";
 
 @font-face {
 	font-family: 'Poppins-Regular';
@@ -74,12 +76,4 @@ body {
 .three-first-sections {
 	background: linear-gradient(#F5F5F5, #DDECFF, #F5F5F5);
 }
-
-/*.container {
-	padding-inline: 20px;
-}*/
-
-/*.visually-hidden {*/
-/*	display: none;*/
-/*}*/
 
