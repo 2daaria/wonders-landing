@@ -1,0 +1,49 @@
+.footer {
+	background-color: var(--primary-blue);
+	color: white;
+}
+
+.footer__wrapper {
+	display: flex;
+	flex-direction: column;
+	padding-inline: clamp(0.625rem, -0.5rem + 5vw, 4rem);
+	padding-top: clamp(0.625rem, -0.5rem + 5vw, 4rem);
+	padding-bottom: 76px;
+	gap: 40px;
+}
+
+.footer__content-wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 32px;
+}
+
+.footer__logo {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	font-size: clamp(1rem, 0.625rem + 1.6667vw, 2.125rem);
+}
+
+.footer__nav {
+	display: grid;
+	grid-template-columns: repeat(3, 192px);
+  gap: 32px;
+}
+
+.footer__nav-title {
+	font-family: "Plus Jakarta Sans SemiBold", sans-serif;
+	font-size: 20px;
+	letter-spacing: 0.4px;
+	padding-bottom: 48px;
+}
+
+.footer__nav-list-item-link {
+	text-decoration: none;
+	color: var(--white);
+	line-height: 1.5;
+	letter-spacing: 0.4px;
+	padding-bottom: 35px;
+}
+

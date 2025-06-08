@@ -8,559 +8,165 @@
 	
 	<title>Wonders | Buy bus tickets online</title>
 </head>
-
 <body>
-	<!--HEADER-->
-	<header class="site-header">
-		<div class="site-header__wrapper">
-			<!--------------LOGO----------------->
-			<a href="#" class="site-logo" aria-label="Go to homepage">
-				<img
-					src="./assets/icons/Logo-element.svg"
-					alt="Wonders logo"
-					width="73"
-					height="34"> <span class="logo-name">Wonders</span>
-			</a>
+	<header class="header">
+		
+		<!----------LOGO + BURGER-OPENER--------->
+		<div class="header__container">
+			<img src="./assets/icons/Logo-element.svg" alt="">
 			
-			<div class="site-header__nav-wrapper">
-				
-				<!----------BURGER BUTTON - кнопка меню на адаптиве, изначально будет скрыта на десктопе--------->
-				<!--
-				aria-expanded="false" это динамический атрибут, который указывает, открыто ли меню сейчас,
-				потом менять значение с помощью JavaScript.
-				aria-controls="main-nav" связывает кнопку с тем элементом, которым она управляет
-				-->
-				<button
-					class="burger-button"
-					aria-label="Toggle navigation menu"
-					aria-expanded="false"
-					aria-controls="main-nav">
-				<span class="burger-icon"> <!--в этом теге svg бургер-кнопки-->
-					<img
-						src="./assets/icons/burger-menu.svg"
-						alt=""
-						width="30"
-						height="24"
-						aria-hidden="true"
-					>
-				</span>
-				</button>
-				
-				<!--------------MENU----------------->
-				<nav class="main-nav" id="main-nav" aria-label="Main menu">
-					<div class="main-nav__wrapper">
-						<ul class="main-nav__list">
-							<li class="main-nav__item"><a href="#mobile-app" class="main-nav__item-link">Mobile App</a></li>
-							<li class="main-nav__item"><a href="#faqs" class="main-nav__item-link">FAQs</a></li>
-							<li class="main-nav__item"><a href="#contact" class="main-nav__item-link">Contact</a></li>
-							<li class="main-nav__item"><a href="#sign-up"
-								class="main-nav__item-link main-nav__item-signup">Sign Up</a></li>
-						</ul>
-					</div>
-				</nav>
-			</div>
+			<button id="burger-opener" class="burger-opener">
+				<img
+					id="burger-icon"
+					src="assets/icons/burger-open.svg"
+					alt=""
+					width="30"
+					height="24"
+					aria-hidden="true"
+				>
+			</button>
+			<span class="logo-name">Wonders</span>
 		</div>
+		
+		<!----------BURGER LIST---------->
+		<nav class="burger__nav">
+			<div id="burger" class="burger burger-closed">
+				<div class="burger__container">
+					<ul class="burger__list">
+						<li><a href="#mobile-app" class="burger__item-link">Mobile App</a></li>
+						<li><a href="#faqs" class="burger__item-link">FAQs</a></li>
+						<li><a href="#contact" class="burger__item-link">Contact</a></li>
+						<li><a href="#sign-up" class="burger__item-link">Sign Up</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<!----------HEADER LIST---------->
+		<nav class="header__nav">
+			<div class="header__nav-container">
+				<ul class="header__nav-list">
+					<li><a href="#mobile-app" class="header__nav-item-link">Mobile App</a></li>
+					<li><a href="#faqs" class="header__nav-item-link">FAQs</a></li>
+					<li><a href="#contact" class="header__nav-item-link">Contact</a></li>
+					<li><a href="#sign-up" class="header__nav-item-link header__nav-item-link-signup">Sign Up</a></li>
+				</ul>
+			</div>
+		</nav>
 	</header>
 	
 	<main>
-		
-		<!--------------HERO----------------->
-		<section class="hero">
-			<div class="hero__wrapper">
-				<div class="hero__content">
-					<h1 class="hero__title">Skip the Climbing, Catch the Bus</h1>
-					<div class="hero__text">
-						<p class="hero__text-line">We sell tickets to the best seats in the house – houses on wheels, that is!</p>
-						<p class="hero__text-line">Get ready for jaw-dropping views without breaking a sweat.</p>
+		<div class="three-first-sections">
+			
+			<!----------HERO---------->
+			<section class="hero"></section>
+			
+			<!----------STATS---------->
+			<section class="stats">
+				<div class="stats__wrapper">
+					<div class="stats__item kilometers">
+						<div class="stats__value-wrapper">
+							<span class="stats__value-item" aria-label="Sixty-eight thousand">68k+</span>
+						</div>
+						<div class="stats__title-wrapper">
+							<span class="stats__title">Track kilometers</span>
+						</div>
 					</div>
 					
-					<!--------------FORM--------------->
-					<form class="form" action="#" method="get">
-						
-						<!--------------ПЕРВЫЙ РЯД ФОРМЫ--------------->
-						<div class="form__trip-and-passengers"> <!--див нужен, чтобы выстроить элементы в ряд-->
-							
-							<div class="form__trip-type"> <!--первый блок с выбором типа поездки-->
-								<label for="round" class="form__radio-control">
-									<input
-										type="radio"
-										class="form__radio form__radio-round"
-										id="round"
-										name="trip"
-										value="round"
-										checked
-									>
-									<span class="form__radio-label">Round Trip</span>
-								</label>
-							</div>
-							
-							<div class="form__trip-type">
-								<label for="oneway" class="form__radio-control">
-									<input
-										type="radio"
-										class="form__radio form__radio-oneway"
-										id="oneway"
-										name="trip"
-										value="oneway"
-									>
-									<span class="form__radio-label">One Way</span>
-								</label>
-							</div>
-							
-							<div class="form__passengers"> <!--второй блок со счётчиком / контейнер счетчика пассажиров-->
-								<label for="passenger-count" class="visually-hidden">Passengers</label>
+					<div class="stats__item photos">
+						<div class="stats__value-wrapper">
+							<span class="stats__value-item" aria-label="One million four hundred thousand">1.4M+</span>
+						</div>
+						<div class="stats__title-wrapper">
+							<span class="stats__title">Photos Taken</span>
+						</div>
+					</div>
+					
+					<div class="stats__item altitude">
+						<div class="stats__value-wrapper">
+							<span class="stats__value-item" aria-label="Twenty-three million">23M+</span>
+						</div>
+						<div class="stats__title-wrapper">
+							<span class="stats__title">Altitude Gained</span>
+						</div>
+					</div>
+					
+					<div class="stats__item years">
+						<div class="stats__value-wrapper">
+							<span class="stats__value-item" aria-label="One hundred sixty-five">165+</span>
+						</div>
+						<div class="stats__title-wrapper">
+							<span class="stats__title">Years of history</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!----------GALLERY---------->
+			<section class="gallery">
+				<div class="gallery__heading">
+					<h2 class="gallery__heading-title">Glimpses of Glory</h2>
+				</div>
+				
+				<div class="gallery__wrapper">
+					
+					<div class="gallery_wrapper-1-2">
+						<div class="gallery__item item-1">
+							<a href="#">
 								<img
-									src="./assets/icons/person%20solid.svg"
-									alt="Person icon"
-									class="form__passenger-count-icon"
-									width="22"
-									height="32"
-									aria-hidden="true"
-								>
-								
-								<div class="form__passengers-counter">
-									<!--кнопка уменьшения количества пассажиров-->
-									<button
-										type="button"
-										class="form__btn-passenger-count"
-										id="btn-minus"
-										aria-label="Remove passenger">
-										<img
-											src="./assets/icons/Minus.svg"
-											alt=""
-											width="20"
-											height="20"
-											aria-hidden="true"
-										>
-									</button>
-									
-									<!--счётчик пассажиров-->
-									<input
-										type="number"
-										class="form__passengers-input"
-										id="passenger-count"
-										value="1"
-										min="1"
-										max="12"
-										readonly
-									>
-									
-									<!--кнопка увеличения количества пассажиров-->
-									<button
-										type="button"
-										class="form__btn-passenger-count"
-										id="btn-plus"
-										aria-label="Add passenger">
-										<img
-											src="./assets/icons/Plus.svg"
-											alt=""
-											width="20"
-											height="20"
-											aria-hidden="true"
-										>
-									</button>
-								</div>
-							</div>
+									class="gallery__item-img img-1"
+									src="./assets/images/gallery-img-1.png"
+									alt="Snowy mountains">
+							</a>
 						</div>
 						
-						<!--------------ВТОРОЙ РЯД ФОРМЫ--------------->
-						<div class="form__stations">
-							
-							<!--------поле Departure-------->
-							<div class="form__field-stations">
-								<label
-									for="departure-station"
-									class="form__label">Departure
-								</label>
-								<div class="form__autocomplete-wrapper">
-									<input
-										type="text"
-										id="departure-station"
-										class="form__input"
-										placeholder="Your City/Station"
-										autocomplete="off"
-									>
-									<ul class="form__suggestions" hidden></ul>
-								</div>
+						<div class="gallery__item item-2">
+							<a href="#">
+								<img
+									class="gallery__item-img img-2"
+									src="./assets/images/gallery-img-2.png"
+									alt="Bus on mountain road">
+							</a>
+						</div>
+					</div>
+					
+					<div class="gallery_wrapper-3-4-5">
+						<div class="gallery_wrapper-3-4">
+							<div class="gallery__item item-3">
+								<a href="#">
+									<img
+										class="gallery__item-img img-3"
+										src="./assets/images/gallery-img-3.png"
+										alt="Mountain slope">
+								</a>
 							</div>
 							
-							<!--------поле Arrival-------->
-							<div class="form__field-stations">
-								<label
-									for="arrival-station"
-									class="form__label">Arrival
-								</label>
-								
-								<div class="form__autocomplete-wrapper">
-									<input
-										type="text"
-										id="arrival-station"
-										class="form__input"
-										placeholder="Where to?"
-										autocomplete="off"
-									>
-									<ul class="form__suggestions" hidden></ul>
-								</div>
+							<div class="gallery__item item-4">
+								<a href="#">
+									<img
+										class="gallery__item-img img-4"
+										src="./assets/images/gallery-img-4.png"
+										alt="Mountain road">
+								</a>
 							</div>
 						</div>
 						
-						<!--------------ТРЕТИЙ РЯД ФОРМЫ--------------->
-						<div class="form__dates">
-							<fieldset class="form__dates-fieldset">
-								<legend class="form__legend">Pick your lucky day</legend>
-								
-								<div class="form__buttons-wrapper">
-									<div class="form__btn-container">
-										<label
-											for="departure-date"
-											class="form__label visually-hidden">Departure date
-										</label> <!--в стилях скрою лейбл через visually-hidden-->
-										
-										<!--
-										aria-haspopup="dialog" сообщает, что по клику появится окно
-										aria-expanded="false" потом можно менять в зависимости от того, открыто окно или нет
-										-->
-										<button
-											type="button"
-											class="form__date-btn"
-											id="departure-date"
-											aria-haspopup="dialog"
-											aria-expanded="false">
-								
-									<span class="form__date-icon" aria-hidden="true">
-											<img
-												src="./assets/icons/Calendar.svg"
-												alt=""
-												width="16"
-												height="24"
-											>
-										</span>
-											<span class="form__date-text">Depart</span>
-										</button>
-									</div>
-									
-									<div class="form__btn-container">
-										<label
-											for="return-date"
-											class="form__label visually-hidden">Return date
-										</label> <!--в стилях скрою лейбл через visually-hidden-->
-										
-										<!--кнопка для вызова календаря-->
-										<button
-											type="button"
-											class="form__date-btn"
-											id="return-date"
-											aria-haspopup="dialog"
-											aria-expanded="false">
-									<span class="form__date-icon" aria-hidden="true">
-											<img
-												src="./assets/icons/Calendar.svg"
-												alt=""
-												width="16"
-												height="24"
-											>
-										</span>
-											<span class="form__date-text">Return</span>
-										</button>
-									</div>
-								</div>
-							</fieldset>
+						<div class="gallery__wrapper-5">
+							<div class="gallery__item item-5">
+								<a href="#">
+									<img
+										class="gallery__item-img img-5"
+										src="./assets/images/gallery-img-5.png"
+										alt="Foggy mountain road with grassy slope">
+								</a>
+							</div>
 						</div>
-						
-						<!--------------КНОПКА ФОРМЫ--------------->
-						<div class="form__search-btn-wrapper">
-							<button
-								type="button"
-								id="search-btn"
-								class="form__search-btn">Find My Alpine Ride
-							</button>
-						</div>
-					</form>
-				
+					</div>
 				</div>
-				
-				<div class="hero__image">
-					<img
-						src="./assets/images/hero.png"
-						alt="Wonders visual"
-						width="640"
-						height="704">
-				</div>
-			</div>
-		</section>
+			</section>
 		
-		<!--------------STATISTICS----------------->
-		<section id="stats" class="stats">
-			<div class="stats__wrapper">
-				<div class="stats__item">
-					<div class="stats__value-wrapper">
-						<span class="stats__item-value" aria-label="Sixty-eight thousand">68k+</span>
-					</div>
-					<div class="stats__title-wrapper">
-						<span class="stats__item-title">Track kilometers</span>
-					</div>
-				</div>
-				
-				<div class="stats__item">
-					<div class="stats__value-wrapper">
-						<span class="stats__item-value" aria-label="One million four hundred thousand">1.4M+</span>
-					</div>
-					<div class="stats__title-wrapper">
-						<span class="stats__item-title">Photos Taken</span>
-					</div>
-				</div>
-				
-				<div class="stats__item">
-					<div class="stats__value-wrapper">
-						<span class="stats__item-value" aria-label="Twenty-three million">23M+</span>
-					</div>
-					<div class="stats__title-wrapper">
-						<span class="stats__item-title">Altitude Gained</span>
-					</div>
-				</div>
-				
-				<div class="stats__item">
-					<div class="stats__value-wrapper">
-						<span class="stats__item-value" aria-label="One hundred sixty-five">165+</span>
-					</div>
-					<div class="stats__title-wrapper">
-						<span class="stats__item-title">Years of history</span>
-					</div>
-				</div>
-			</div>
-		</section>
-		
-		<!--------------GALLERY----------------->
-		<!--хочу попробовать галерею реализовать через джаваскрипт, чтоб каждое изображение в отдельной модалке открывалось-->
-		<section class="gallery">
-			<div class="gallery__heading">
-				<h2 class="gallery__heading-title">Glimpses of Glory</h2>
-			</div>
-			
-			<div class="gallery__wrapper">
-				<div class="gallery__item">
-					<a href="#">
-						<img
-							src="./assets/images/gallery-img-1.png"
-							alt="Snowy mountains">
-					</a>
-				</div>
-				
-				<div class="gallery__item">
-					<a href="#">
-						<img
-							src="./assets/images/gallery-img-2.png"
-							alt="Bus on mountain road">
-					</a>
-				</div>
-				
-				<div class="gallery__item">
-					<a href="#">
-						<img
-							src="./assets/images/gallery-img-3.png"
-							alt="Mountain slope">
-					</a>
-				</div>
-				
-				<div class="gallery__item">
-					<a href="#">
-						<img
-							src="./assets/images/gallery-img-4.png"
-							alt="Mountain road">
-					</a>
-				</div>
-				
-				<div class="gallery__item">
-					<a href="#">
-						<img
-							src="./assets/images/gallery-img-5.png"
-							alt="Foggy mountain road with grassy slope">
-					</a>
-				</div>
-			</div>
-		</section>
-		
-		<!--------------APPs----------------->
-		<section class="appstores">
-			<div class="appstores__title-wrapper">
-				<h2 class="appstores__title">Free downloads app now!</h2>
-			</div>
-			
-			<div class="appstores__wrapper">
-				<div class="appstores__buttons">
-					<a
-						href="#"
-						role="button"
-						class="appstores__link"
-						aria-label="Download App Now from Google Play">
-						<img
-							src="./assets/images/Badge-googleplay.svg"
-							alt="Download Wonders app on Google Play"
-							width="213"
-							height="65"
-							class="appstores__img">
-					</a>
-				</div>
-				
-				<div class="appstores__buttons">
-					<a
-						href="#"
-						role="button"
-						class="appstores__link"
-						aria-label="Download App Now from AppGallery">
-						<img
-							src="./assets/images/Badge-appgallery.svg"
-							alt="Download Wonders app on AppGallery"
-							width="210"
-							height="65"
-							class="appstores__img">
-					</a>
-				</div>
-				
-				<div class="appstores__buttons">
-					<a
-						href="#"
-						role="button"
-						class="appstores__link"
-						aria-label="Download App Now from AppStore">
-						<img
-							src="./assets/images/Badge-appstore.svg"
-							alt="Download Wonders app on AppStore"
-							width="189"
-							height="65"
-							class="appstores__img">
-					</a>
-				</div>
-			</div>
-		</section>
-		
-		<!--------------FAQs----------------->
-		<!--сначала попробую доработать визул через CSS, если будет время, то попробую и через джаваскрипт-->
-		<section class="faq">
-			<div class="faq__wrapper">
-				<details class="faq__item">
-					<summary class="faq__item-summary">Alpine Bus Journeys?</summary>
-					<p class="faq__item-answer">
-						Forget crowded cities! Alpine Bus Journeys are your comfy seat with panoramic windows to breathtaking mountain vistas, charming villages, and air so fresh it might make you yodel (please don't, unless you're outside). It's transportation with a side of unparalleled scenery (and maybe a hairpin turn).
-					</p>
-				</details>
-				
-				<details class="faq__item">
-					<summary class="faq__item-summary">What about seating options?</summary>
-					<p class="faq__item-answer">
-						Generally, you'll find comfy standard seats (great views, great value, maybe great new friends) and perhaps slightly better seats with extra legroom. All offer a front-row seat to the greatest show on Earth – the Alps!
-					</p>
-				</details>
-				
-				<details class="faq__item">
-					<summary class="faq__item-summary">What is the Alpine Wallet?</summary>
-					<p class="faq__item-answer">
-						It's your digital stash of cash that makes booking bus tickets smoother than a perfectly paved mountain road. Load it up and watch your travel dreams become reality faster than a bus goes downhill.
-					</p>
-				</details>
-				
-				<details class="faq__item">
-					<summary class="faq__item-summary">My Altitude Score?</summary>
-					<p class="faq__item-answer">
-						Your loyalty points for cruising the mountain roads! Higher scores might get you priority boarding (less elbowing for the best window seat!) or maybe just bragging rights among fellow peak-passengers who prefer four wheels.
-					</p>
-				</details>
-				
-				<details class="faq__item">
-					<summary class="faq__item-summary">Why a Bus Station Fee?</summary>
-					<p class="faq__item-answer">
-						A small contribution to ensure the station is clean, has reasonably fresh mountain air (filtered from bus fumes), and enough signs pointing you towards your bus, not away from it. Sometimes covers the cost of moving rogue bicycles.
-					</p>
-				</details>
-				
-				<details class="faq__item">
-					<summary class="faq__item-summary">Why are buses late?</summary>
-					<p class="faq__item-answer">
-						Sometimes it's the weather (snow happens!), sometimes a sudden flock of particularly slow-moving sheep on the road, and sometimes the driver just had to stop for a photo of that view. Or maybe they got stuck behind a tractor. Welcome to "Mountain Road Time"!
-					</p>
-				</details>
-			</div>
-		</section>
-		
-		<!--------------CONTACT----------------->
-		<section class="contact">
-			<div class="contact__background">
-				<div class="contact__card">
-					<h2 class="contact__title">Contact Us</h2>
-					
-					<p class="contact__tel">
-						<a href="tel:+419876543210">+41 98765 43210</a>
-					</p>
-					
-					<p class="contact__email">
-						<a href="mailto:hello@peakpasses.eu">hello@peakpasses.eu</a>
-					</p>
-					
-					<address class="contact__address">
-						<div class="contact__address-line">Alpenblick Strasse 7,</div>
-						<div class="contact__address-line">12345 Edelweiss Town, Alps</div>
-					</address>
-				</div>
-			</div>
-		</section>
-	</main>
-	
-	<!--------------FOOTER----------------->
-	<footer class="footer">
-		<div class="footer__wrapper">
-			<div class="footer__logo">
-				<img
-					src="./assets/icons/logo-element-white.svg"
-					alt="Wonders logo white"
-					width="73"
-					height="34"
-				>
-				<p class="footer__logo-title">Wonders</p>
-			</div>
-			
-			<nav class="footer__nav" aria-label="Footer Navigation">
-				<div class="footer__nav-item">
-					<h4 class="footer__nav-title">About</h4>
-					<ul class="footer__nav-list">
-						<li class="footer__nav-list-item"><a href="#">How it works</a></li>
-						<li class="footer__nav-list-item"><a href="#">Featured</a></li>
-						<li class="footer__nav-list-item"><a href="#">Partnership</a></li>
-						<li class="footer__nav-list-item"><a href="#">Business Relation</a></li>
-					</ul>
-				</div>
-				
-				<div class="footer__nav-item">
-					<h4 class="footer__nav-title">Community</h4>
-					<ul class="footer__nav-list">
-						<li class="footer__nav-list-item"><a href="#">Events</a></li>
-						<li class="footer__nav-list-item"><a href="#">Blog</a></li>
-						<li class="footer__nav-list-item"><a href="#">Podcast</a></li>
-						<li class="footer__nav-list-item"><a href="#">Invite a friend</a></li>
-					</ul>
-				</div>
-				
-				<div class="footer__nav-item">
-					<h4 class="footer__nav-title">Socials</h4>
-					<ul class="footer__nav-list">
-						<li class="footer__nav-list-item"><a href="#">Discord</a></li>
-						<li class="footer__nav-list-item"><a href="#">Instagram</a></li>
-						<li class="footer__nav-list-item"><a href="#">Twitter</a></li>
-						<li class="footer__nav-list-item"><a href="#">Facebook</a></li>
-					</ul>
-				</div>
-			</nav>
-			
-			<div class="footer__copyright-wrapper">
-				<p class="footer__copyright-text">English: ©
-					<span id="copyright-date"
-						class="footer__copyright-date"> 2025                <!--сюда вставить date (getFullYear) через джаваскрипт-->
-						</span>
-					Peak Passages.
-				</p>
-				<p class="footer__copyright-text"> All Rights Reserved (Especially the Window Seats).</p>
-			</div>
 		</div>
-	</footer>
+	</main>
+	<script src="./scripts/burger.js"></script>
 </body>
-
 </html>

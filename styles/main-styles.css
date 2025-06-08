@@ -1,8 +1,7 @@
 @import "./normalize.css";
-@import "./header.css";
-@import "./hero.css";
-@import "./stats.css";
-@import "./appstores.css";
+@import "header.css";
+@import "stats.css";
+@import "./gallery.css";
 
 @font-face {
 	font-family: 'Poppins-Regular';
@@ -28,6 +27,18 @@
 	font-weight: 700;
 }
 
+@font-face {
+	font-family: 'Plus Jakarta Sans Medium';
+	src: url('../assets/fonts/plusjakartasans-medium.woff2');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Plus Jakarta Sans SemiBold';
+	src: url('../assets/fonts/plusjakartasans-semibold.woff2');
+	font-weight: 600;
+}
+
 :root {
 	--primary-black: #202020;
 	--primary-blue: #0578FF;
@@ -49,6 +60,9 @@
 	--heading-font: 'Poppins-Bold';
 	
 	--focus-border: 2px solid #0578FF;
+	
+	--padding-mobile-360: 20px;
+	--padding-mobile-768: 32px;
 }
 
 body {
@@ -57,6 +71,15 @@ body {
 	color: var(--primary-black);
 }
 
-.visually-hidden {
-	display: none;
+.three-first-sections {
+	background: linear-gradient(#F5F5F5, #DDECFF, #F5F5F5);
 }
+
+/*.container {
+	padding-inline: 20px;
+}*/
+
+/*.visually-hidden {*/
+/*	display: none;*/
+/*}*/
+
