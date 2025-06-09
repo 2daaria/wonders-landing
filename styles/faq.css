@@ -71,6 +71,6 @@ details[open] summary::after {
 	
 	.faq__items-wrapper {
 		width: 100%;
-		max-width: 1086px;
+		/*max-width: 1086px;*/
 	}
 }

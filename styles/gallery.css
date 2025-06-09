@@ -107,7 +107,7 @@
 	}
 	
 	.item-5 {
-		width: 704px;
+		max-width: 704px;
 		height: 225px;
 	}
 }
@@ -148,13 +148,11 @@
 	.item-3 {
 		max-width: 305px;
 		height: 489px;
-		flex: 0 0 auto;
 	}
 	
 	.item-4 {
 		max-width: 416px;
 		height: 489px;
-		flex: 0 0 auto;
 	}
 	
 	.item-5 {
