@@ -1,9 +1,10 @@
 @import "./normalize.css";
-@import "header.css";
-@import "stats.css";
+@import "./header.css";
+@import "./stats.css";
 @import "./gallery.css";
 @import "./app-stores.css";
 @import "./faq.css";
+@import "./contact.css";
 
 @font-face {
 	font-family: 'Poppins-Regular';

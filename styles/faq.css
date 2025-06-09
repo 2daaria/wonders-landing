@@ -1,7 +1,8 @@
 .faq__wrapper {
 	background-color: var(--white);
 	padding-inline: var(--padding-mobile-360);
-	padding-block: var(--wrapper-offset);
+	padding-top: 64px;
+	padding-bottom: calc(64px + 95px);
 }
 
 .faq__title {
@@ -13,6 +14,10 @@
 
 .faq__item {
 	border-bottom: 1px solid var(--primary-black);
+}
+
+.faq__item:last-child {
+	border-bottom: none;
 }
 
 .faq__item-summary {
@@ -52,14 +57,16 @@ details[open] summary::after {
 @media (min-width: 361px) and (max-width: 768px) {
 	.faq__wrapper {
 		padding-inline: var(--padding-mobile-768);
-		padding-block: clamp(4rem, 0.4706rem + 15.6863vw, 8rem);
+		padding-top: clamp(4rem, 0.4706rem + 15.6863vw, 8rem);
+		padding-bottom: calc(128px + 120px);
 	}
 }
 
 @media (min-width: 769px) {
 	.faq__wrapper {
 		padding-inline: clamp(4rem, 1.6458rem + 10.463vw, 11.0625rem);
-		padding-block: 128px;
+		padding-top: clamp(4rem, 0.4706rem + 15.6863vw, 8rem);
+		padding-bottom: calc(128px + 120px);
 	}
 	
 	.faq__items-wrapper {
