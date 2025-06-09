@@ -16,6 +16,7 @@
 	grid-template-columns: repeat(2, 1fr);
 	grid-column-gap: 40px;
 	grid-row-gap: 24px;
+	padding-top: 40px;
 }
 
 .footer__nav-title {
@@ -49,13 +50,13 @@ br {
 	letter-spacing: -0.3px;
 }
 
-@media (min-width: 361px) and (max-width: 768px) {
+@media (min-width: 561px) and (max-width: 768px) {
 	.footer__wrapper {
 		padding-inline: var(--padding-mobile-768);
 	}
 	
 	.footer__nav-wrapper {
-		grid-template-columns: repeat(3, max(192px));
+		grid-template-columns: repeat(3, minmax(150px, 192px));
 		grid-column-gap: 32px;
 	}
 	
@@ -86,8 +87,14 @@ br {
 		max-width: 640px;
 	}
 	
+	.footer__logo img {
+		width: 100%;
+		max-width: 295px;
+		min-width: 175px;
+	}
+	
 	.footer__nav-wrapper {
-		grid-template-columns: repeat(3, max(192px));
+		grid-template-columns: repeat(3, minmax(150px, 192px));
 		grid-column-gap: 32px;
 	}
 	
