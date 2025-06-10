@@ -8,7 +8,7 @@
 .header__container {
 	display: flex;
 	justify-content: space-between;
-	/*padding-block: 32.5px;*/
+	padding-block: 32.5px;
 	padding-inline: var(--padding-mobile-360);
 	transition: padding-block 0.3s ease-in-out;
 }
@@ -98,7 +98,7 @@
 		align-items: center;
 		gap: 15px;
 		padding-inline: 0;
-		padding-block: 32.5px;
+		/*padding-block: 32.5px;*/
 	}
 	
 	.header__nav-list {
