@@ -68,7 +68,7 @@
 	}
 	
 	.gallery__heading {
-		padding-block: 128px 24px;
+		padding-block: clamp(4rem, 0.4706rem + 15.6863vw, 8rem) 24px;
 	}
 	
 	.gallery__heading-title {
