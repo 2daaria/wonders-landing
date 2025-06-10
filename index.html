@@ -10,48 +10,48 @@
 </head>
 <body>
 	<header class="header">
-			<!----------LOGO + BURGER-OPENER--------->
-			<div id="header" class="header__container">
-				<img src="./assets/icons/Logo-element.svg" alt="">
-				
-				<button id="burger-opener" class="burger-opener">
-					<img
-						id="burger-icon"
-						src="assets/icons/burger-open.svg"
-						alt=""
-						width="30"
-						height="24"
-						aria-hidden="true"
-					>
-				</button>
-				<span class="logo-name">Wonders</span>
-			</div>
+		<!----------LOGO + BURGER-OPENER--------->
+		<div id="header" class="header__container">
+			<img src="./assets/icons/Logo-element.svg" alt="">
 			
-			<!----------BURGER LIST---------->
-			<nav class="burger__nav">
-				<div id="burger" class="burger burger-closed">
-					<div class="burger__container">
-						<ul class="burger__list">
-							<li><a href="#mobile-app" class="burger__item-link">Mobile App</a></li>
-							<li><a href="#faqs" class="burger__item-link">FAQs</a></li>
-							<li><a href="#contact" class="burger__item-link">Contact</a></li>
-							<li><a href="#" class="burger__item-link">Sign Up</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-			
-			<!----------HEADER LIST---------->
-			<nav class="header__nav">
-				<div class="header__nav-container">
-					<ul class="header__nav-list">
-						<li><a href="#mobile-app" class="header__nav-item-link">Mobile App</a></li>
-						<li><a href="#faqs" class="header__nav-item-link">FAQs</a></li>
-						<li><a href="#contact" class="header__nav-item-link">Contact</a></li>
-						<li><a href="#" class="header__nav-item-link header__nav-item-link-signup">Sign Up</a></li>
+			<button id="burger-opener" class="burger-opener">
+				<img
+					id="burger-icon"
+					src="assets/icons/burger-open.svg"
+					alt=""
+					width="30"
+					height="24"
+					aria-hidden="true"
+				>
+			</button>
+			<span class="logo-name">Wonders</span>
+		</div>
+		
+		<!----------BURGER LIST---------->
+		<nav class="burger__nav">
+			<div id="burger" class="burger burger-closed">
+				<div class="burger__container">
+					<ul class="burger__list">
+						<li><a href="#mobile-app" class="burger__item-link">Mobile App</a></li>
+						<li><a href="#faqs" class="burger__item-link">FAQs</a></li>
+						<li><a href="#contact" class="burger__item-link">Contact</a></li>
+						<li><a href="#" class="burger__item-link">Sign Up</a></li>
 					</ul>
 				</div>
-			</nav>
+			</div>
+		</nav>
+		
+		<!----------HEADER LIST---------->
+		<nav class="header__nav">
+			<div class="header__nav-container">
+				<ul class="header__nav-list">
+					<li><a href="#mobile-app" class="header__nav-item-link">Mobile App</a></li>
+					<li><a href="#faqs" class="header__nav-item-link">FAQs</a></li>
+					<li><a href="#contact" class="header__nav-item-link">Contact</a></li>
+					<li><a href="#" class="header__nav-item-link header__nav-item-link-signup">Sign Up</a></li>
+				</ul>
+			</div>
+		</nav>
 	</header>
 	
 	<main>
@@ -65,7 +65,8 @@
 				<div class="stats__wrapper">
 					<div class="stats__item kilometers">
 						<div class="stats__value-wrapper">
-							<span class="stats__value-item" aria-label="Sixty-eight thousand">68k+</span>
+							<span class="stats__value-item" aria-label="Sixty-eight thousand"><span class="num"
+								data-value="68">68</span>k+</span>
 						</div>
 						<div class="stats__title-wrapper">
 							<span class="stats__title">Track kilometers</span>
@@ -74,7 +75,8 @@
 					
 					<div class="stats__item photos">
 						<div class="stats__value-wrapper">
-							<span class="stats__value-item" aria-label="One million four hundred thousand">1.4M+</span>
+							<span class="stats__value-item" aria-label="One million four hundred thousand"><span class="num"
+								data-value="1.4">1.4</span>M+</span>
 						</div>
 						<div class="stats__title-wrapper">
 							<span class="stats__title">Photos Taken</span>
@@ -83,7 +85,8 @@
 					
 					<div class="stats__item altitude">
 						<div class="stats__value-wrapper">
-							<span class="stats__value-item" aria-label="Twenty-three million">23M+</span>
+							<span class="stats__value-item" aria-label="Twenty-three million"><span class="num"
+								data-value="23">23</span>M+</span>
 						</div>
 						<div class="stats__title-wrapper">
 							<span class="stats__title">Altitude Gained</span>
@@ -92,7 +95,8 @@
 					
 					<div class="stats__item years">
 						<div class="stats__value-wrapper">
-							<span class="stats__value-item" aria-label="One hundred sixty-five">165+</span>
+							<span class="stats__value-item" aria-label="One hundred sixty-five"><span class="num"
+								data-value="165">165</span>+</span>
 						</div>
 						<div class="stats__title-wrapper">
 							<span class="stats__title">Years of history</span>
@@ -103,66 +107,67 @@
 			
 			<!----------GALLERY---------->
 			<section class="gallery">
-				<div class="gallery__heading">
-					<h2 class="gallery__heading-title">Glimpses of Glory</h2>
-				</div>
-				
-				<div class="gallery__wrapper">
-					
-					<div class="gallery_wrapper-1-2">
-						<div class="gallery__item item-1">
-							<a href="#">
-								<img
-									class="gallery__item-img img-1"
-									src="./assets/images/gallery-img-1.png"
-									alt="Snowy mountains">
-							</a>
-						</div>
-						
-						<div class="gallery__item item-2">
-							<a href="#">
-								<img
-									class="gallery__item-img img-2"
-									src="./assets/images/gallery-img-2.png"
-									alt="Bus on mountain road">
-							</a>
-						</div>
+				<div class="gallery__outer-wrapper">
+					<div class="gallery__heading">
+						<h2 class="gallery__heading-title">Glimpses of Glory</h2>
 					</div>
 					
-					<div class="gallery_wrapper-3-4-5">
-						<div class="gallery_wrapper-3-4">
-							<div class="gallery__item item-3">
+					<div class="gallery__wrapper">
+						
+						<div class="gallery_wrapper-1-2">
+							<div class="gallery__item item-1">
 								<a href="#">
 									<img
-										class="gallery__item-img img-3"
-										src="./assets/images/gallery-img-3.png"
-										alt="Mountain slope">
+										class="gallery__item-img img-1"
+										src="./assets/images/gallery-img-1.png"
+										alt="Snowy mountains">
 								</a>
 							</div>
 							
-							<div class="gallery__item item-4">
+							<div class="gallery__item item-2">
 								<a href="#">
 									<img
-										class="gallery__item-img img-4"
-										src="./assets/images/gallery-img-4.png"
-										alt="Mountain road">
+										class="gallery__item-img img-2"
+										src="./assets/images/gallery-img-2.png"
+										alt="Bus on mountain road">
 								</a>
 							</div>
 						</div>
 						
-						<div class="gallery__wrapper-5">
-							<div class="gallery__item item-5">
-								<a href="#">
-									<img
-										class="gallery__item-img img-5"
-										src="./assets/images/gallery-img-5.png"
-										alt="Foggy mountain road with grassy slope">
-								</a>
+						<div class="gallery_wrapper-3-4-5">
+							<div class="gallery_wrapper-3-4">
+								<div class="gallery__item item-3">
+									<a href="#">
+										<img
+											class="gallery__item-img img-3"
+											src="./assets/images/gallery-img-3.png"
+											alt="Mountain slope">
+									</a>
+								</div>
+								
+								<div class="gallery__item item-4">
+									<a href="#">
+										<img
+											class="gallery__item-img img-4"
+											src="./assets/images/gallery-img-4.png"
+											alt="Mountain road">
+									</a>
+								</div>
+							</div>
+							
+							<div class="gallery__wrapper-5">
+								<div class="gallery__item item-5">
+									<a href="#">
+										<img
+											class="gallery__item-img img-5"
+											src="./assets/images/gallery-img-5.png"
+											alt="Foggy mountain road with grassy slope">
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			
 			</section>
 			
 			<!----------APP-STORES---------->
@@ -359,6 +364,7 @@
 	</footer>
 	
 	<script src="./scripts/burger.js"></script>
-		<script src="./scripts/header-scroll.js"></script>
+	<script src="./scripts/header-scroll.js"></script>
+	<!--	<script src="./scripts/stats-animation.js"></script>-->
 </body>
 </html>
