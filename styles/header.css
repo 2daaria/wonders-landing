@@ -98,7 +98,7 @@
 		align-items: center;
 		gap: 15px;
 		padding-inline: 0;
-		padding-block: 0;
+		padding-block: 32.5px;
 	}
 	
 	.header__nav-list {
