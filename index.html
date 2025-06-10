@@ -10,49 +10,48 @@
 </head>
 <body>
 	<header class="header">
-		
-		<!----------LOGO + BURGER-OPENER--------->
-		<div id="header" class="header__container">
-			<img src="./assets/icons/Logo-element.svg" alt="">
+			<!----------LOGO + BURGER-OPENER--------->
+			<div id="header" class="header__container">
+				<img src="./assets/icons/Logo-element.svg" alt="">
+				
+				<button id="burger-opener" class="burger-opener">
+					<img
+						id="burger-icon"
+						src="assets/icons/burger-open.svg"
+						alt=""
+						width="30"
+						height="24"
+						aria-hidden="true"
+					>
+				</button>
+				<span class="logo-name">Wonders</span>
+			</div>
 			
-			<button id="burger-opener" class="burger-opener">
-				<img
-					id="burger-icon"
-					src="assets/icons/burger-open.svg"
-					alt=""
-					width="30"
-					height="24"
-					aria-hidden="true"
-				>
-			</button>
-			<span class="logo-name">Wonders</span>
-		</div>
-		
-		<!----------BURGER LIST---------->
-		<nav class="burger__nav">
-			<div id="burger" class="burger burger-closed">
-				<div class="burger__container">
-					<ul class="burger__list">
-						<li><a href="#mobile-app" class="burger__item-link">Mobile App</a></li>
-						<li><a href="#faqs" class="burger__item-link">FAQs</a></li>
-						<li><a href="#contact" class="burger__item-link">Contact</a></li>
-						<li><a href="#" class="burger__item-link">Sign Up</a></li>
+			<!----------BURGER LIST---------->
+			<nav class="burger__nav">
+				<div id="burger" class="burger burger-closed">
+					<div class="burger__container">
+						<ul class="burger__list">
+							<li><a href="#mobile-app" class="burger__item-link">Mobile App</a></li>
+							<li><a href="#faqs" class="burger__item-link">FAQs</a></li>
+							<li><a href="#contact" class="burger__item-link">Contact</a></li>
+							<li><a href="#" class="burger__item-link">Sign Up</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			
+			<!----------HEADER LIST---------->
+			<nav class="header__nav">
+				<div class="header__nav-container">
+					<ul class="header__nav-list">
+						<li><a href="#mobile-app" class="header__nav-item-link">Mobile App</a></li>
+						<li><a href="#faqs" class="header__nav-item-link">FAQs</a></li>
+						<li><a href="#contact" class="header__nav-item-link">Contact</a></li>
+						<li><a href="#" class="header__nav-item-link header__nav-item-link-signup">Sign Up</a></li>
 					</ul>
 				</div>
-			</div>
-		</nav>
-		
-		<!----------HEADER LIST---------->
-		<nav class="header__nav">
-			<div class="header__nav-container">
-				<ul class="header__nav-list">
-					<li><a href="#mobile-app" class="header__nav-item-link">Mobile App</a></li>
-					<li><a href="#faqs" class="header__nav-item-link">FAQs</a></li>
-					<li><a href="#contact" class="header__nav-item-link">Contact</a></li>
-					<li><a href="#" class="header__nav-item-link header__nav-item-link-signup">Sign Up</a></li>
-				</ul>
-			</div>
-		</nav>
+			</nav>
 	</header>
 	
 	<main>
@@ -360,6 +359,6 @@
 	</footer>
 	
 	<script src="./scripts/burger.js"></script>
-	<!--	<script src="./scripts/header-scroll.js"></script>-->
+		<script src="./scripts/header-scroll.js"></script>
 </body>
 </html>
