@@ -1,0 +1,236 @@
+/*-------------------ВИД ПОЕЗДКИ + СЧЁТЧИК--------------------*/
+.form__trip-and-passengers {
+	background-color: var(--white);
+	border-radius: var(--border-radius);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-block: 3px;
+	padding-inline: 8px;
+	font-size: 12px;
+	width: 100%;
+	height: 36px;
+}
+
+.form__radio {
+	position: absolute;
+	opacity: 0;
+}
+
+.form__radio-control {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.form__radio-label {
+	position: relative;
+	padding-left: calc(18px + 7px); /* место под кастомную иконку радио + паддинг от иконки до лейбла*/
+	font-size: 12px;
+	text-wrap: nowrap;
+}
+
+/*кастомный радио*/
+.form__radio-label:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 18px;
+	height: 24px;
+	background-image: url("../assets/icons/unchecked.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* при выборе */
+.form__radio:checked + .form__radio-label::before {
+	background-image: url("../assets/icons/checked.svg");
+}
+
+/*-----СЧЁТЧИК------*/
+.form__passengers {
+	display: flex;
+	width: 88px;
+}
+
+.form__passenger-count-icon {
+	padding-right: 6px;
+}
+
+.form__btn-passenger-count {
+	background: none;
+	outline: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.form__passenger-count {
+	font-family: "Plus Jakarta Sans Medium", sans-serif;
+	font-size: 14px;
+	text-align: center;
+	margin: auto;
+}
+
+/*-------------------DEPARTURE & ARRIVAL--------------------*/
+
+.form__station-wrapper {
+	display: flex;
+	flex-direction: column;
+	padding-block: 24px;
+	gap: 24px;
+}
+
+.form__label, .form__legend {
+	display: block;
+	font-family: Poppins-SemiBold, sans-serif;
+	line-height: 150%;
+	padding-bottom: 16px;
+}
+
+.form__input {
+	width: 100%;
+	height: 53px;
+	padding-left: 24px;
+	background-color: var(--white);
+	border-radius: var(--border-radius);
+	outline: none;
+	border: none;
+}
+
+.form__input::placeholder, .form__date-btn {
+	font-family: "Poppins-Medium", sans-serif;
+	font-size: 14px;
+	color: var(--primary-grey);
+}
+
+/*--------ВЫПАДАЮЩИЙ СПИСОК--------*/
+.form__suggestions {
+	background-color: var(--white);
+	padding-left: 24px;
+	padding-block: 5px;
+	border-radius: var(--border-radius);
+	height: auto;
+	max-height: 200px;
+	scroll-behavior: smooth;
+	overflow-y: scroll;
+}
+
+.form__suggestion-item {
+	padding-block: 4px;
+}
+
+/*--------------CALENDAR---------------*/
+
+.form__buttons-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	padding-bottom: 24px;
+}
+
+.form__date-btn {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	transition: var(--transition);
+}
+
+/*--------------КНОПКА ФОРМЫ---------------*/
+.form__search-btn {
+	width: 100%;
+	height: 62px;
+	border: none;
+	border-radius: var(--border-radius);
+	background-color: var(--primary-blue);
+	font-family: "Poppins-Bold", sans-serif;
+	color: var(--white);
+	font-size: 20px;
+	transition: var(--transition);
+}
+
+@media (min-width: 361px) and (max-width: 768px) {
+	.form__trip-and-passengers {
+		font-size: clamp(0.5rem, -0.3824rem + 3.9216vw, 1.5rem);
+	}
+	
+	.form__radio-label {
+		font-size: clamp(0.75rem, 0.6397rem + 0.4902vw, 0.875rem);
+	}
+	
+	.form__station-wrapper, .form__buttons-wrapper {
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 32px;
+	}
+	
+	.form__field-stations {
+		flex: 1 1 304px;
+		max-width: 304px;
+		min-width: 0;
+	}
+	
+	.form__input {
+		width: 100%;
+	}
+	
+	.form__btn-container {
+		flex: 1 1 304px;
+		max-width: 304px;
+		min-width: 0;
+	}
+	
+	.form__date-btn {
+		width: 100%;
+	}
+}
+
+@media (max-width: 500px) {
+	.form__station-wrapper, .form__buttons-wrapper {
+		flex-direction: column;
+	}
+	
+	.form__field-stations {
+		flex: 0;
+		max-width: 304px;
+		min-width: 0;
+	}
+	
+	.form__btn-container {
+		flex: 0;
+		max-width: 304px;
+		min-width: 0;
+	}
+}
+
+@media (min-width: 769px) {
+	.form__station-wrapper, .form__buttons-wrapper {
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 32px;
+	}
+	
+	.form__field-stations {
+		flex: 1 1 304px;
+		max-width: 304px;
+		min-width: 0;
+	}
+	
+	.form__input {
+		width: 100%;
+	}
+	
+	.form__btn-container {
+		flex: 1 1 304px;
+		max-width: 304px;
+		min-width: 0;
+	}
+	
+	.form__date-btn {
+		width: 100%;
+	}
+}
+

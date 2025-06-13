@@ -1,5 +1,7 @@
 @import "./normalize.css";
 @import "./header.css";
+@import "./hero.css";
+@import "./hero-form.css";
 @import "./stats.css";
 @import "./gallery.css";
 @import "./app-stores.css";
@@ -76,6 +78,9 @@ body {
 }
 
 .three-first-sections {
-	background: linear-gradient(#F5F5F5, #DDECFF, #F5F5F5);
+	background: linear-gradient(180deg,rgba(245, 245, 245, 1) 0%, rgba(221, 236, 255, 1) 28%, rgba(245, 245, 245, 1) 100%);
 }
 
+.visually-hidden {
+	display: none;
+}

@@ -1,224 +1,80 @@
-.hero {
-	background: linear-gradient(to top, #e0eefd, #f3f4f6);
-}
-
 .hero__wrapper {
-	display: flex;
-	justify-content: center;
-	padding-inline: var(--wrapper-offset);
-	padding-top: 64px;
+	padding-top: 24px;
 	padding-bottom: 128px;
-	gap: 32px;
-}
-
-.hero__content, .hero__image {
-	flex-basis: 640px;
+	padding-inline: var(--padding-mobile-360);
+	width: 100%;
 }
 
 .hero__title {
-	font-family: 'Poppins-Bold', sans-serif;
-	font-size: clamp(2rem, 1.3333rem + 2.963vw, 4rem);
-	margin-bottom: 32px;
+	font-family: Poppins-Bold, sans-serif;
+	font-size: 32px;
+	padding-bottom: 24px;
 }
 
 .hero__text {
-	display: flex;
-	flex-direction: column;
-	font-size: clamp(0.75rem, 0.6667rem + 0.3704vw, 1rem);
-	margin-bottom: 32px;
-}
-
-/*СТИЛИЗАЦИЯ ФОРМЫ*/
-
-.form__trip-and-passengers, .form__stations, .form__dates, .form__search-btn-wrapper {
-	width: 100%;
-	min-width: 380px;
-}
-
-/*----ПЕРВЫЙ РЯД-----*/
-/*контейнер первой строки формы*/
-.form__trip-and-passengers {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 8px;
-	background-color: var(--white);
-	border-radius: var(--border-radius);
-	padding-inline: 24px;
-	padding-block: 1px;
-}
-
-/*РАДИО КНОПКИ*/
-.form__radio {
-	position: absolute;
-	opacity: 0;
-}
-
-.form__radio-control {
-	display: flex;
-	align-items: center;
-	cursor: pointer;
-}
-
-.form__radio-label {
-	position: relative;
-	padding-left: calc(18px + 7px); /* место под кастомную иконку радио + паддинг от иконки до лейбла*/
-	font-size: 14px;
-	text-wrap: nowrap;
-}
-
-/*кастомный радио*/
-.form__radio-label::before {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 18px;
-	height: 24px;
-	background-image: url("../assets/icons/unchecked.svg");
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-
-/* при выборе */
-.form__radio:checked + .form__radio-label::before {
-	background-image: url("../assets/icons/checked.svg");
-}
-
-/*СЧЕТТЧИК ПАССАЖИРОВ*/
-
-/*контейнер счетчика пассажиров*/
-.form__passengers {
-	display: flex;
-	align-items: center;
-	gap: 6px;
-}
-
-/*контейнер для кнопок и инпута*/
-.form__passengers-counter {
-	display: flex;
-	align-items: center;
-	gap: 6px;
-}
-
-/*кнопки плюс и минус*/
-.form__btn-passenger-count {
-	background: none;
-	outline: none;
-	border: none;
-	padding: 0;
-	cursor: pointer;
-	transition: var(--transition);
-}
-
-.form__btn-passenger-count:focus {
-	border: var(--focus-border);
-	border-radius: var(--border-radius);
-	padding: 2px;
-}
-
-/*инпут с количеством пассажиров*/
-/*из-за стрелочек-контролеров значение инпута не по середине, потом разберусь*/
-.form__passengers-input {
-	width: 31px;
-	font-family: "Poppins-Medium", sans-serif;
-	font-size: 14px;
-	border: none;
-	outline: none;
-	background: transparent;
-}
-
-/*----ВТОРОЙ РЯД-----*/
-
-.form__stations {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding-block: 24px;
-	column-gap: 32px;
-}
-
-.form__field-stations {
-	width: 100%;
-}
-
-.form__label, .form__legend {
-	display: block;
-	font-family: 'Poppins-SemiBold', sans-serif;
-	padding-bottom: 16px;
-	line-height: 1.2;
-}
-
-.form__input {
-	width: 100%;
-	height: 53px;
-	background-color: var(--white);
-	border: none;
-	border-radius: var(--border-radius);
-	padding-left: 24px;
-	transition: var(--transition);
-}
-
-.form__input::placeholder, .form__date-btn {
-	font-family: "Poppins-Medium", sans-serif;
-	font-size: 14px;
-	color: var(--primary-grey);
-}
-
-.form__input:focus {
-	border: var(--focus-border);
-	outline: none;
-}
-
-/*----ТРЕТИЙ РЯД-----*/
-
-.form__buttons-wrapper {
-	display: flex;
-	justify-content: space-between;
+	font-size: 11px;
 	padding-bottom: 24px;
-	gap: 32px;
 }
 
-.form__btn-container {
-	width: 50%;
+.hero__image {
+	display: none;
 }
 
-.form__date-btn {
-	display: flex;
-	align-items: center;
-	gap: 12px;
-	height: 53px;
-	width: 100%;
-	background-color: var(--white);
-	border: none;
-	border-radius: var(--border-radius);
-	padding-left: 24px;
-	transition: var(--transition);
+@media (min-width: 361px) and (max-width: 768px) {
+	.hero__wrapper {
+		padding-top: 64px;
+		padding-inline: 0;
+		padding-left: 32px;
+		max-width: 640px;
+	}
+	
+	.hero__title {
+		font-size: clamp(2rem, 0.2353rem + 7.8431vw, 4rem);
+		padding-bottom: 32px;
+	}
+	
+	.hero__text {
+		font-size: clamp(0.6875rem, 0.4118rem + 1.2255vw, 1rem);
+		padding-bottom: 32px;
+	}
 }
 
-.form__date-btn:focus {
-	border: var(--focus-border);
-	border-radius: var(--border-radius);
-	outline: none;
+@media (max-width: 670px) {
+	.hero__wrapper {
+		padding-right: clamp(1.25rem, 0.5882rem + 2.9412vw, 2rem);
+	}
 }
 
-/*----КНОПКА ФОРМЫ----*/
-.form__search-btn {
-	width: 100%;
-	height: 62px;
-	border: none;
-	border-radius: var(--border-radius);
-	background-color: var(--primary-blue);
-	font-family: "Poppins-Bold", sans-serif;
-	color: var(--white);
-	font-size: 20px;
-	transition: var(--transition);
+@media (min-width: 769px) {
+	.hero__wrapper {
+		display: flex;
+		flex-direction: row;
+		gap: 32px;
+		width: 100%;
+		justify-content: center;
+		padding-inline: var(--wrapper-offset);
+		padding-top: 64px;
+		padding-bottom: 128px;
+	}
+	
+	.hero__content {
+		width: 640px;
+	}
+	.hero__image {
+		display: block;
+		width: 100%;
+		max-width: 640px;
+	}
+	
+	.hero__title {
+		font-size: 64px;
+	}
+	
+	.hero__text {
+		font-size: 16px;
+	}
 }
 
-.form__search-btn:focus, .form__search-btn:hover {
-	background-color: var(--primary-black);
-}
 
 
 
