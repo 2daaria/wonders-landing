@@ -67,7 +67,7 @@
 	}
 	
 	.hero__title {
-		font-size: 64px;
+		font-size: clamp(2rem, -0.2857rem + 4.7619vw, 4rem);
 	}
 	
 	.hero__text {
