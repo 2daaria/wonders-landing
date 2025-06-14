@@ -203,5 +203,13 @@
 		justify-content: space-between;
 		gap: 32px;
 	}
+	
+	.form__search-btn:hover {
+		background-color: #0046f6;
+	}
+	
+	.footer__nav-list-item-link:hover {
+		color: #bcd9ff;
+	}
 }
 
