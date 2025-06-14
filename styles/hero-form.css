@@ -163,6 +163,7 @@
 @media (min-width: 361px) and (max-width: 768px) {
 	.form__trip-and-passengers {
 		font-size: clamp(0.5rem, -0.3824rem + 3.9216vw, 1.5rem);
+		padding-inline: 24px;
 	}
 	
 	.form__radio-label {
@@ -183,6 +184,10 @@
 }
 
 @media (min-width: 769px) {
+	.form__trip-and-passengers {
+		padding-inline: 24px;
+	}
+	
 	.form__stations, .form__buttons-wrapper {
 		flex-direction: row;
 		justify-content: space-between;
