@@ -76,12 +76,16 @@
 }
 
 /*-------------------DEPARTURE & ARRIVAL--------------------*/
-
-.form__station-wrapper {
+.form__stations {
 	display: flex;
 	flex-direction: column;
 	padding-block: 24px;
 	gap: 24px;
+	width: 100%;
+}
+
+.form__field-stations {
+	width: 100%;
 }
 
 .form__label, .form__legend {
@@ -124,12 +128,16 @@
 }
 
 /*--------------CALENDAR---------------*/
-
 .form__buttons-wrapper {
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
 	padding-bottom: 24px;
+	width: 100%;
+}
+
+.form__btn-container {
+	width: 100%;
 }
 
 .form__date-btn {
@@ -161,76 +169,24 @@
 		font-size: clamp(0.75rem, 0.6397rem + 0.4902vw, 0.875rem);
 	}
 	
-	.form__station-wrapper, .form__buttons-wrapper {
+	.form__stations, .form__buttons-wrapper {
 		flex-direction: row;
 		justify-content: space-between;
 		gap: 32px;
-	}
-	
-	.form__field-stations {
-		flex: 1 1 304px;
-		max-width: 304px;
-		min-width: 0;
-	}
-	
-	.form__input {
-		width: 100%;
-	}
-	
-	.form__btn-container {
-		flex: 1 1 304px;
-		max-width: 304px;
-		min-width: 0;
-	}
-	
-	.form__date-btn {
-		width: 100%;
 	}
 }
 
 @media (max-width: 500px) {
-	.form__station-wrapper, .form__buttons-wrapper {
+	.form__stations, .form__buttons-wrapper {
 		flex-direction: column;
-	}
-	
-	.form__field-stations {
-		flex: 0;
-		max-width: 304px;
-		min-width: 0;
-	}
-	
-	.form__btn-container {
-		flex: 0;
-		max-width: 304px;
-		min-width: 0;
 	}
 }
 
 @media (min-width: 769px) {
-	.form__station-wrapper, .form__buttons-wrapper {
+	.form__stations, .form__buttons-wrapper {
 		flex-direction: row;
 		justify-content: space-between;
 		gap: 32px;
-	}
-	
-	.form__field-stations {
-		flex: 1 1 304px;
-		max-width: 304px;
-		min-width: 0;
-	}
-	
-	.form__input {
-		width: 100%;
-	}
-	
-	.form__btn-container {
-		flex: 1 1 304px;
-		max-width: 304px;
-		min-width: 0;
-	}
-	
-	.form__date-btn {
-		width: 100%;
 	}
 }
 

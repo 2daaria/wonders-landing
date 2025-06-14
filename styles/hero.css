@@ -5,6 +5,10 @@
 	width: 100%;
 }
 
+.hero__content {
+	width: 100%;
+}
+
 .hero__title {
 	font-family: Poppins-Bold, sans-serif;
 	font-size: 32px;
@@ -24,7 +28,10 @@
 	.hero__wrapper {
 		padding-top: 64px;
 		padding-inline: 0;
-		padding-left: 32px;
+		padding-left: clamp(1.25rem, 0.5882rem + 2.9412vw, 2rem);
+	}
+	
+	.hero__content {
 		max-width: 640px;
 	}
 	

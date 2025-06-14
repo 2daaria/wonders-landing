@@ -146,42 +146,38 @@
 							
 							<!--------------DEPARTURE & ARRIVAL--------------->
 							<div class="form__stations">
-								<div class="form__station-wrapper">
-									<!--------поле Departure-------->
-									<div class="form__field-stations">
-										<label
-											for="departure-station"
-											class="form__label">Departure
-										</label>
-										<input
-											type="text"
-											id="departure-station"
-											class="form__input js-autocomplete"
-											placeholder="Your City/Station"
-											autocomplete="off"
-										>
-										<ul class="form__suggestions" hidden></ul>
-									</div>
+								<!--------поле Departure-------->
+								<div class="form__field-stations">
+									<label
+										for="departure-station"
+										class="form__label">Departure
+									</label>
+									<input
+										type="text"
+										id="departure-station"
+										class="form__input js-autocomplete"
+										placeholder="Your City/Station"
+										autocomplete="off"
+									>
+									<ul class="form__suggestions" hidden></ul>
+								</div>
+								
+								
+								<!--------поле Arrival-------->
+								<div class="form__field-stations">
+									<label
+										for="arrival-station"
+										class="form__label">Arrival
+									</label>
 									
-									
-									<!--------поле Arrival-------->
-									<div class="form__field-stations">
-										<label
-											for="arrival-station"
-											class="form__label">Arrival
-										</label>
-										
-										<div class="form__autocomplete-wrapper">
-											<input
-												type="text"
-												id="arrival-station"
-												class="form__input js-autocomplete"
-												placeholder="Where to?"
-												autocomplete="off"
-											>
-											<ul class="form__suggestions" hidden></ul>
-										</div>
-									</div>
+									<input
+										type="text"
+										id="arrival-station"
+										class="form__input js-autocomplete"
+										placeholder="Where to?"
+										autocomplete="off"
+									>
+									<ul class="form__suggestions" hidden></ul>
 								</div>
 							</div>
 							
@@ -243,16 +239,17 @@
 									</div>
 								</fieldset>
 							</div>
-						</form>
+							
+							<!--------------КНОПКА ФОРМЫ--------------->
+							<div class="form__search-btn-wrapper">
+								<button
+									type="button"
+									id="search-btn"
+									class="form__search-btn">Find My Alpine Ride
+								</button>
+							</div>
 						
-						<!--------------КНОПКА ФОРМЫ--------------->
-						<div class="form__search-btn-wrapper">
-							<button
-								type="button"
-								id="search-btn"
-								class="form__search-btn">Find My Alpine Ride
-							</button>
-						</div>
+						</form>
 					</div>
 					
 					<div class="hero__image">
