@@ -103,6 +103,9 @@
 	border-radius: var(--border-radius);
 	outline: none;
 	border: none;
+	font-size: 14px;
+	line-height: 150%;
+	font-family: Poppins-Medium, sans-serif;
 }
 
 .form__input::placeholder, .form__date-btn {
@@ -115,16 +118,23 @@
 .form__suggestions {
 	background-color: var(--white);
 	padding-left: 24px;
+	padding-right: 24px;
 	padding-block: 5px;
 	border-radius: var(--border-radius);
 	height: auto;
-	max-height: 200px;
-	scroll-behavior: smooth;
+	max-height: 250px;
 	overflow-y: scroll;
+	margin-top: 12px;
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	max-width: 320px;
 }
 
 .form__suggestion-item {
-	padding-block: 4px;
+	padding-block: 10px;
+	font-size: 14px;
+	line-height: 24px;
 }
 
 /*--------------CALENDAR---------------*/

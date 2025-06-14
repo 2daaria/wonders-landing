@@ -48,7 +48,7 @@
 :root {
 	--primary-black: #202020;
 	--primary-blue: #0578FF;
-	--primary-grey: #90A3BF;
+	--primary-grey: rgba(144, 163, 191, 0.5);
 	--yellow: #FFC501;
 	--white: #FFF;
 	
