@@ -9,6 +9,7 @@ function updateCounterDisplay() {
 }
 
 plusBtn.addEventListener('click', () => {
+    if (count < 12)
     count++
     updateCounterDisplay()
 })
