@@ -21,7 +21,7 @@ function closeCalendar(event) {
 }
 
 // Показываем картинки
-departureCalendar.addEventListener('click', (e) => {
+departureCalendar.addEventListener('click', () => {
     calendarDeparture.innerHTML = '<img class="calendar-img" src="/assets/images/date-picker.svg" alt="">';
 })
 
