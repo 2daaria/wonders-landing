@@ -26,11 +26,11 @@ function closeCalendar(event) {
 
 // Показываем картинки
 departureCalendar.addEventListener('click', () => {
-    calendarDeparture.innerHTML = '<img class="calendar-img" src="./assets/images/date-picker.svg" alt="">';
+    calendarDeparture.innerHTML = '<img class="calendar-img" src="assets/images/date-picker.svg" alt="">';
 })
 
 arrivalCalendar.addEventListener('click', () => {
-    calendarArrival.innerHTML = '<img class="calendar-img" src="./assets/images/date-picker.svg" alt="">';
+    calendarArrival.innerHTML = '<img class="calendar-img" src="assets/images/date-picker.svg" alt="">';
 })
 
 //Глобальный обработчик, чтобы по клику в любое место страницы вне картинки и поля ввода скрывать саму картинку
