@@ -29,5 +29,5 @@ arrivalCalendar.addEventListener('click', () => {
     calendarArrival.innerHTML = '<img class="calendar-img" src="/assets/images/date-picker.svg" alt="">';
 })
 
-//Глобальный обработчик
+//Глобальный обработчик, чтобы по клику в любое место страницы вне картинки и поля ввода скрывать саму картинку
 document.addEventListener('click', closeCalendar);
