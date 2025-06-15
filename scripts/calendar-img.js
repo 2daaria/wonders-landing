@@ -11,11 +11,15 @@ function closeCalendar(event) {
     // Если клик был не на изображении и не по кнопкам, то скрываем картинку
     if (
         !calendarImg1?.contains(event.target) &&
-        !calendarImg2?.contains(event.target) &&
-        !departureCalendar.contains(event.target) &&
-        !arrivalCalendar.contains(event.target)
+        !departureCalendar.contains(event.target)
     ) {
         calendarDeparture.innerHTML = '';
+    }
+
+    if (
+        !calendarImg2?.contains(event.target) &&
+        !arrivalCalendar.contains(event.target)
+    ) {
         calendarArrival.innerHTML = '';
     }
 }
