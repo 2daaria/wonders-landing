@@ -54,7 +54,7 @@ details[open] summary::after {
 	cursor: pointer;
 }
 
-@media (min-width: 361px) and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 992px) {
 	.faq__wrapper {
 		padding-inline: var(--padding-mobile-768);
 		padding-top: clamp(4rem, 0.4706rem + 15.6863vw, 8rem);
@@ -62,7 +62,7 @@ details[open] summary::after {
 	}
 }
 
-@media (min-width: 769px) {
+@media (min-width: 993px) {
 	.faq__wrapper {
 		padding-inline: clamp(4rem, 1.6458rem + 10.463vw, 11.0625rem);
 		padding-top: clamp(4rem, 0.4706rem + 15.6863vw, 8rem);

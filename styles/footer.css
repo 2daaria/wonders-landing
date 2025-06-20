@@ -50,7 +50,7 @@ br {
 	letter-spacing: -0.3px;
 }
 
-@media (min-width: 561px) and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 992px) {
 	.footer__wrapper {
 		padding-inline: var(--padding-mobile-768);
 	}
@@ -70,7 +70,7 @@ br {
 	}
 }
 
-@media (min-width: 769px) {
+@media (min-width: 993px) {
 	.footer__wrapper {
 		padding-inline: var(--wrapper-offset);
 		padding-top: 64px;

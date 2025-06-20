@@ -21,25 +21,15 @@
 	gap: 30px;
 }
 
-.google-play {
-	width: 100%;
-	max-width: 168px;
+.appstores__link {
+	height: 50px;
 }
 
-.app-gallery {
-	width: 100%;
-	max-width: 165px;
-}
-
-.app-store {
-	width: 100%;
-	max-width: 148px;
-}
-
-@media (min-width: 361px) and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 992px) {
 	.appstores__wrapper {
 		padding-inline: clamp(2.875rem, -1.261rem + 18.3824vw, 7.5625rem);
 		padding-block: clamp(2rem, -3.2941rem + 23.5294vw, 8rem);
+		row-gap: 32px;
 	}
 	
 	.appstores__title {
@@ -54,56 +44,48 @@
 	
 	.google-play {
 		grid-column: 1 / 3;
-		width: 100%;
-		max-width: 220px;
-		min-width: 168px;
 	}
 	
-	.app-gallery {
-		width: 100%;
-		max-width: 217px;
-		min-width: 165px;
+	.appstores__link {
+		height: 65px;
 	}
 	
-	.app-store {
-		width: 100%;
-		max-width: 195px;
-		min-width: 148px;
+	.google-play img {
+		width: 220px;
 	}
+	
+	.app-gallery img {
+		width: 217px;
+	}
+	
+	.app-store img {
+		width: 195px;
+	}
+	
 }
 
-@media (min-width: 769px) {
+@media (min-width: 993px) {
 	.appstores__wrapper {
-		padding-inline: clamp(2.875rem, -2.1875rem + 22.5vw, 18.0625rem);
+		padding-inline: 289px;
 		padding-top: 128px;
 		padding-bottom: 116px;
 		row-gap: 60px;
 	}
 	
 	.appstores__title {
-		font-size: clamp(2.5rem, 2.0417rem + 2.037vw, 3.875rem);
+		font-size: 62px;
 		text-wrap: nowrap;
 	}
 	
 	.appstores__button-wrapper {
-		width: 100%;
+		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-column-gap: clamp(0.625rem, -1.7708rem + 10.6481vw, 7.8125rem);
+		justify-items: center;
+		width: 863px;
 	}
 	
-	.google-play {
-		grid-column: 1 / 1;
-		width: 100%;
-		max-width: 220px;
+	.appstores__link {
+		height: 65px;
 	}
 	
-	.app-gallery {
-		width: 100%;
-		max-width: 217px;
-	}
-	
-	.app-store {
-		width: 100%;
-		max-width: 195px;
-	}
 }

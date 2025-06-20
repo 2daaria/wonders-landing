@@ -29,7 +29,7 @@
 	text-wrap: nowrap;
 }
 
-@media (min-width: 361px) and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 992px) {
 	.stats__wrapper {
 		padding-block: 64px;
 		padding-inline: clamp(1.25rem, -4.8713rem + 27.2059vw, 8.1875rem);
@@ -49,7 +49,7 @@
 	}
 }
 
-@media (min-width: 769px) {
+@media (min-width: 993px) {
 	.stats__wrapper {
 		padding-block: 59.5px;
 		padding-inline: var(--wrapper-offset);
